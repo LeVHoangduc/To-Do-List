@@ -1,0 +1,44 @@
+.title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.taskCheckBox {
+  flex: 0 0 10%;
+  max-width: 10%;
+  height: 30.5px;
+}
+.taskName {
+  flex: 0 0 70%;
+  max-width: 70%;
+  height: 30.5px;
+  line-height: 30.5px;
+  padding-left: 0.2rem;
+  color: #383f50;
+  font-size: 2rem;
+  &.taskNameDone {
+    color: #b2b7bb;
+    text-decoration: line-through;
+  }
+}
+.taskAction {
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskBTN {
+  flex: 0 0 3.5rem;
+  max-width: 3.5rem;
+  font-size: 2rem;
+}
