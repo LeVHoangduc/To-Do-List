@@ -14,7 +14,8 @@ const syncReactToLocal = (HandleNewTodos: HandleNewTodos) => {
   const todoString = localStorage.getItem('todos')
   const todosObj: Todo[] = JSON.parse(todoString || '[]')
   const newTodosObj = HandleNewTodos(todosObj)
-  localStorage.setItem('todos', JSON.stringify(newTodosObj))
+  const newTodosObjTest = (newTodosObj: Todo[]) => newTodosObj.filter((todo) => todo.value !== '')
+  localStorage.setItem('todos', JSON.stringify(newTodosObjTest(newTodosObj)))
 }
 
 export default function Todolist() {
@@ -97,7 +98,7 @@ export default function Todolist() {
     // })
     setTodos((prev) => handler(prev))
     setCurrentTodo(null)
-    setTodos((prev) => prev.filter((todo) => todo.value !== '' || undefined || null))
+    setTodos((prev) => prev.filter((todo) => todo.value !== ''))
     // console.log('finish edit')
     syncReactToLocal(handler)
   }
