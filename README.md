@@ -44,3 +44,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Add more :
+
+# Notice
+
+1. when you edit a task , if the content of task is empty , the application will not add it.
+2. When you type something for task but it's empty or you accidentally pressed enter or in some other case... , the application doesn't add it.
